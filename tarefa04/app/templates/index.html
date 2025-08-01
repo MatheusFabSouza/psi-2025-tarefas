@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas</title>
+    <style>
+      .atrasada { color: red; }
+      .no-prazo { color: green; }
+      .concluida {color: green;}
+    </style>
+</head>
+<body>
+  <h1>Minhas Tarefas (hoje: {{ hoje }})</h1>
+  <table border="1" cellpadding="4">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Status</th>
+        <th>Prazo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in tarefas %}
+      <tr class="{% if t.prazo < hoje and t.status != t.CONCLUIDA %}atrasada{% else %}no-prazo{% endif %}">
+        <td>{{ t.nome }}</td>
+        <td>{{ t.status }}</td>
+        <td>{{ t.prazo }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3">Nenhuma tarefa cadastrada.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
