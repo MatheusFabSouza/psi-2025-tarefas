@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Post, Blog
 
 def index(request):
@@ -9,5 +9,5 @@ def index(request):
     return render(request, "app/index.html", context)
 
 def post_detail(request, id):
-    post = get_object_or_404(Post, pk=id)
-    return render(request, 'app/post_detail.html', {'post': post})
+    return render(request, 'app/post_detail.html')
+
