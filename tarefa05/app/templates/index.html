@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% block content %}
+  <h2>Todos os posts</h2>
+  <ul>
+    {% for post in posts %}
+      <li class="post">
+        <a href="{% url 'post' post.id %}">
+          <strong>{{ post.titulo }}</strong>
+        </a>
+        – {{ post.data_pub }}
+      </li>
+    {% empty %}
+      <li>Nenhum post cadastrado.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

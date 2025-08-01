@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% block content %}
+  <article>
+    <h2>{{ post.titulo }}</h2>
+    <p><em>Publicado em {{ post.data_pub }}</em></p>
+    <img src="{{ post.imagem_url }}" alt="Imagem {{ post.titulo }}" style="max-width:100%;"/>
+    <div>
+      {{ post.texto|linebreaks }}
+    </div>
+  </article>
+  <p><a href="{% url 'index' %}">&larr; Voltar</a></p>
+{% endblock %}
