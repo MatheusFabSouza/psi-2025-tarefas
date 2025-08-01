@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Blog
 
-@admin.register(Post)
+admin.site.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'data_pub')
-    ordering     = ('data_pub',)
+    display = ('titulo', 'data_pub')
+    ordem     = ('data_pub',)
+admin.site.register(Blog)
