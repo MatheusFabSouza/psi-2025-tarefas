@@ -24,9 +24,9 @@ Atividades entregues após o prazo valem 50% da nota até a data final de cada u
 ### Tarefa 04 - Lista de Tarefas
 - **Entrega: 01/08/2025**
 - Siga as instruções do slide.
-- https://dvcirilo-ifrn.github.io/psi/slides/aula08.html#37
+- https://dvcirilo-ifrn.github.io/psi/slides/aula08.html#43
 
 ### Tarefa 05 - Blog Simples
 - **Entrega: 01/08/2025**
 - Siga as instruções do slide.
-- https://dvcirilo-ifrn.github.io/psi/slides/aula08.html#38
+- https://dvcirilo-ifrn.github.io/psi/slides/aula08.html#44
